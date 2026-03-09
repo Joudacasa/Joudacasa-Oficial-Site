@@ -1,4 +1,4 @@
-function searchVideos() {
+ function searchVideos() {
   const query = document.getElementById("searchBox").value.toLowerCase();
   const results = document.getElementById("results");
   results.innerHTML = "";
@@ -21,4 +21,5 @@ function searchVideos() {
   }
   
 }
+
 
