@@ -1,77 +1,22 @@
- body {
+body {
   font-family: 'Segoe UI', sans-serif;
-  margin: 000;
-  background: linear-gradient(135deg, #1a1a1a, #333);
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a1a, #333); /* Mantém o fundo escuro */
   color: #f7f7fc;
   text-align: center;
 }
 
-header {
-  background: #080813;
-  padding: 20px;
+/* Regra que limpa a caixa dos jogos mas mantém o site dark */
+iframe[src*="itch.io/embed"] {
+    border: none !important;
+    box-shadow: none !important; /* Tira o brilho neon apenas daqui */
+    background: transparent !important;
+    display: inline-block;
+    margin: 10px;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 10px;
+/* Mantém o brilho neon apenas em vídeos (como o da Home) */
+video, iframe:not([src*="itch.io/embed"]) {
+    border: 2px solid #0096ff;
+    box-shadow: 0 0 15px #0096ff;
 }
-
-nav a {
-  margin: 0 15px;
-  color: #0026ff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-iframe, video {
-  width: 90%; 
-  max-width: 800px; 
-  height: auto;
-  aspect-ratio: 16 / 9; 
-  margin: 20px auto;
-  display: block;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(69, 116, 245, 0.5);
-  border: none;
-}
-
-section {
-  padding: 20px;
-}
-
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  
-  nav a {
-    margin: 5px;
-    font-size: 0.9rem;
-  }
-
-  iframe, video {
-    width: 95%;
-    margin: 10px auto;
-  }
-  
-  .container {
-    padding: 10px;
-  }
-}
-
-
-
-.buttons{
-    display: flex;
-    margin-right: 10px auto
-}
-
-
-
-
-
-
